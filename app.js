@@ -7,6 +7,7 @@ while(numberFromUser != secretNumber){
     numberFromUser = prompt("Choose a number between 1 and 15.")
     if(secretNumber == numberFromUser){
         alert(`Awesome! You discovery the secret number: ${secretNumber}! :D`)
+        break;
     } {
         if(numberFromUser > secretNumber){
             alert(`The secret number its smaller than number ${numberFromUser}.`)
