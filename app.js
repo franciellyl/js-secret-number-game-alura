@@ -1,16 +1,19 @@
 alert("Welcome to the secret number game!");
 let secretNumber = 7;
-let numberFromUser = prompt("Choose a number between 1 and 15.");
+let numberFromUser
+let tentatives = 1;
 
-if (secretNumber == numberFromUser){
-    alert(`Awesome! You discovery the secret number: ${secretNumber}! :D`);
-} else {
-    alert("Sorry, you're wrong! Try again.")
-    numberFromUser = prompt("Choose another number between 1 and 15.");
+while(numberFromUser != secretNumber){
+    numberFromUser = prompt("Choose a number between 1 and 15.")
     if(secretNumber == numberFromUser){
-        alert(`Awesome! You discovery the secret number: ${secretNumber}! :D`);
-    } else {
-        alert("Sorry, you're wrong! Game Over!")
+        alert(`Awesome! You discovery the secret number: ${secretNumber}! :D`)
+    } {
+        if(numberFromUser > secretNumber){
+            alert(`The secret number its smaller than number ${numberFromUser}.`)
+        } else {
+            alert(`The secret number its greather than number ${numberFromUser}.`)
+        }
+        tentatives = tentatives + 1
     }
 }
 
