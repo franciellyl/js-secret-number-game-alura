@@ -9,6 +9,7 @@ This project it's part of the Alura course of JavaScript.
 
 
 ### About Game
-It's an interactive game and the game start asking the player to choose an secret number. 
-If this number is right, we're return a alert message to congratulations the player, if the number was wrong, the player has another chance to choose a new number and verify it's right.
-At the moment, the player has only two chances to discovery the secret number but this game it's a working in progress.
+It's an interactive game and the game start asking the player to choose a secret number. 
+If this number is right, we're return an alert message to congratulations the player and the number of tentatives they use to discovery the secret number, if the number was wrong, the player has another chances to choose a new number and verify it's right.
+
+This game it's a working in progress.
