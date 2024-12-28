@@ -1,23 +1,22 @@
-alert("Welcome to the secret number game!")
-let maximeNumber = 100;
-let secretNumber = parseInt(Math.random() * maximeNumber + 1)
-console.log(secretNumber)
-let numberFromUser
-let tentatives = 1;
+let secretNumber = generateRandomNumber();
+console.log(secretNumber);
 
-while(numberFromUser != secretNumber){
-    numberFromUser = prompt(`Choose a number between 1 and ${maximeNumber}.`)
-    if(secretNumber == numberFromUser){
-        break;
-    } else {
-        if(numberFromUser > secretNumber){
-            alert(`The secret number its smaller than number ${numberFromUser}.`)
-        } else {
-            alert(`The secret number its greather than number ${numberFromUser}.`)
-        }
-        tentatives++
-    }
+function returnTextInScreen(tag, text){
+    let field = document.querySelector(tag);
+    field.innerHTML = text;
 }
 
-let wordTentatives = tentatives > 1 ? 'tentatives' : 'tentative';
-alert(`Awesome! You discovery the secret number with ${tentatives} ${wordTentatives}! :D`)
+function generateRandomNumber(){
+    return parseInt(Math.random() * 10 + 1);
+}
+
+function verificarChute() {
+    console.log("Verified the inputed number");
+    let numberInputed = document.querySelector('input').value;
+    console.log(numberInputed == secretNumber)
+
+
+}
+
+returnTextInScreen('h1', 'Secret Game');
+returnTextInScreen('p', 'Choose a number between 0 and 10');
