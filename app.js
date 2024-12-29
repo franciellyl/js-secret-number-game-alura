@@ -10,12 +10,17 @@ function generateRandomNumber(){
     return parseInt(Math.random() * 10 + 1);
 }
 
-function verificarChute() {
-    console.log("Verified the inputed number");
+function validateInputtedNumber() {
+    console.log("Verified the inputted number");
     let numberInputed = document.querySelector('input').value;
     console.log(numberInputed == secretNumber)
-
-
+    if(numberInputed == secretNumber){
+        console.log("The player choose the right number.")
+        alert(`Good work! You discovery the secret number ${numberInputed}`)
+    } else {
+        alert("Please, try again!")
+        document.getElementById('input').value='';
+    }
 }
 
 returnTextInScreen('h1', 'Secret Game');
