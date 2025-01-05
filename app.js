@@ -1,3 +1,5 @@
+let sortedNumberList = [];
+let limitNumber = 10;
 let secretNumber = generateRandomNumber();
 let numberOfTentative = 0;
 console.log(secretNumber);
